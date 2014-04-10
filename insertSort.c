@@ -21,10 +21,11 @@ int main(void)
 void insertSort(int *data, int n)
 {
     int i,k;
-    for(i=1;i < n; i++){
+    for(i=1;i < n; i++){    //starting from the second element
         for(k=i;k > 0 && data[k] < data[k-1];k--){
             swap(&data[k], &data[k-1]);
         }
+        // unvarient: data[0,i] is sorted.
     }
 }
 void bubbleSort(int *data, int n)
